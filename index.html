@@ -4,38 +4,58 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Gotta Scoop 'Em All: Sim-and-Real Co-Training of Graph-based Neural Dynamics for Long-Horizon Scooping</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+  <style>
+    :root { --maxw: 900px; --fg: #1b1f23; --muted: #5f6b7a; --accent: #0b84ff; }
+    * { box-sizing: border-box; }
+    body { margin: 0; font-family: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif; color: var(--fg); line-height: 1.6; }
+    .container { max-width: var(--maxw); margin: 0 auto; padding: 48px 20px; }
+    h1 { font-size: clamp(28px, 5vw, 46px); line-height: 1.15; text-align: center; font-weight: 800; letter-spacing: -0.02em; margin: 0 0 16px; }
+    h2 { font-size: clamp(18px, 3vw, 24px); font-weight: 700; margin: 28px 0 12px; }
+    p { margin: 0 0 14px; }
+    .muted { color: var(--muted); }
+    .title-block { text-align: center; margin-bottom: 28px; }
+    .teaser { margin: 24px 0 32px; }
+    .teaser img { width: 100%; height: auto; border-radius: 8px; box-shadow: 0 10px 30px rgba(0,0,0,0.08); }
+    .section { margin: 36px 0; }
+    .video-wrap { position: relative; width: 100%; aspect-ratio: 16 / 9; background: #000; border-radius: 8px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.08); }
+    .video-wrap iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
+  </style>
 </head>
 <body>
 
-<h1>Gotta Scoop 'Em All: Sim-and-Real Co-Training of Graph-based Neural Dynamics for Long-Horizon Scooping</h1>
+  <main class="container">
+    <div class="title-block">
+      <h1>Gotta Scoop 'Em All: Sim-and-Real Co-Training of Graph-based Neural Dynamics for Long-Horizon Scooping</h1>
+      <p class="muted">CoRL 2025 submission</p>
+    </div>
 
-<section id="teaser">
-  <object data="./static/images/teaser.pdf" type="application/pdf" width="100%" height="600">
-    <p>Your browser can't display PDFs. <a href="./static/images/teaser.pdf">Download the teaser PDF</a>.</p>
-  </object>
-  
-  
-</section>
+    <section id="teaser" class="teaser">
+      <img src="./static/images/teaser.png" alt="Teaser image"/>
+    </section>
 
-<section id="abstract">
-  <h2>Abstract</h2>
-  <p>
-    We present a system to address a new problem of removing all granular objects from a container using a scoop, a task that requires long-horizon reasoning over the complex interactions between granular objects, the scoop, and the container. To tackle this challenge, we adopt a graph-based neural dynamics (GBND) model trained through sim-and-real co-training that leverages both rich synthetic data and a small amount of real-world data.
-  </p>
-  <p>
-    Using the learned model, we plan long-horizon scooping sequences of behavior primitives with Monte-carlo Tree Search (MCTS).
-  </p>
-  <p>
-    Extensive experimental evaluations demonstrate that our system with the co-training strategy is capable of removing all materials in a container with fewer than 20 scoops, significantly outperforming strategies that use only simulation or real data. Our approach can also generalize in a zero-shot manner to new materials, and quickly adapt to new containers with few additional data points.
-  </p>
-</section>
+    <section id="abstract" class="section">
+      <h2>Abstract</h2>
+      <p>
+        We present a system to address a new problem of removing all granular objects from a container using a scoop, a task that requires long-horizon reasoning over the complex interactions between granular objects, the scoop, and the container. To tackle this challenge, we adopt a graph-based neural dynamics (GBND) model trained through sim-and-real co-training that leverages both rich synthetic data and a small amount of real-world data.
+      </p>
+      <p>
+        Using the learned model, we plan long-horizon scooping sequences of behavior primitives with Monte-carlo Tree Search (MCTS).
+      </p>
+      <p>
+        Extensive experimental evaluations demonstrate that our system with the co-training strategy is capable of removing all materials in a container with fewer than 20 scoops, significantly outperforming strategies that use only simulation or real data. Our approach can also generalize in a zero-shot manner to new materials, and quickly adapt to new containers with few additional data points.
+      </p>
+    </section>
 
-<section id="video">
-  <h2>Video</h2>
-  <div>
-    <iframe width="100%" height="480" src="https://www.youtube.com/embed/MM_xyRnbXmk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-  </div>
-</section>
+    <section id="video" class="section">
+      <h2>Video</h2>
+      <div class="video-wrap">
+        <iframe src="https://www.youtube.com/embed/MM_xyRnbXmk" title="YouTube video" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+      </div>
+    </section>
+  </main>
 
 </body>
 </html>
